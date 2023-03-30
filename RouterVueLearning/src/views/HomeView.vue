@@ -1,23 +1,18 @@
 <script setup>
 import cars from "../data/cars.json"
 import {RouterLink} from "vue-router";
-
 </script>
-
 
 <template>
     <div>
         <h1>Home View</h1>
         <div class="cars">
-            <RouterLink to="/cars/${car.id}" v-for="car in cars" :key="car.id" >
+            <RouterLink :to="`/cars/${car.id}`" v-for="car in cars" :key="car.id" >
                 {{ car.name }}
             </RouterLink>
-
-
         </div>
     </div>
 </template>
-
 
 <style scoped>
 .cars  {
@@ -30,6 +25,4 @@ import {RouterLink} from "vue-router";
     box-shadow: 1px 1px 1px rgb(0,0,0,0.388) ;
     margin: 10px;
 }
-
-
 </style>
